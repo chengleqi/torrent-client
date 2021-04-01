@@ -139,7 +139,7 @@ func (t *Torrent) startDownloadWorker(peer peers.Peer, workQueue chan *pieceWork
 	defer c.Conn.Close()
 	log.Printf("Completed handshake with %s\n", peer.IP)
 
-	c.SendUnchoke()
+	//c.SendUnchoke()
 	c.SendInterested()
 
 	for pw := range workQueue {
